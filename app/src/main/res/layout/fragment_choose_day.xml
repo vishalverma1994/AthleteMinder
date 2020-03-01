@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.ChooseDayFragment">
+
+    <TextView
+        android:id="@+id/tvChooseYourDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/din_next_lt_pro_heavy_condensed"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="choose your day"
+        android:textAllCaps="true"
+        android:textColor="@color/colorGrey"
+        android:textSize="38sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCircleUsage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/din_next_lt_pro_condensed"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:maxLines="2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/circle_drag_drop_message"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGrey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChooseYourDay" />
+
+    <LinearLayout
+        android:id="@+id/llTraining"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@mipmap/ic_green_glow_active"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llCompetition"
+        app:layout_constraintTop_toBottomOf="@+id/tvCircleUsage">
+
+        <ImageView
+            android:id="@+id/ivTraining"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_training" />
+
+        <TextView
+            android:id="@+id/tvTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/din_next_lt_pro_medium_cond"
+            android:maxLines="1"
+            android:text="training"
+            android:textAllCaps="true"
+            android:textColor="@color/colorGreen"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCompetition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@mipmap/ic_orange_glow_active"
+        app:layout_constraintStart_toEndOf="@+id/llTraining"
+        app:layout_constraintEnd_toStartOf="@+id/llRest"
+        app:layout_constraintTop_toBottomOf="@+id/tvCircleUsage">
+
+        <ImageView
+            android:id="@+id/ivCompetition"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_competetion" />
+
+        <TextView
+            android:id="@+id/tvCompetition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/din_next_lt_pro_medium_cond"
+            android:maxLines="1"
+            android:text="competition"
+            android:textAllCaps="true"
+            android:textColor="@color/colorOrange"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:background="@mipmap/ic_blue_glow_active"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/llCompetition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCircleUsage">
+
+        <ImageView
+            android:id="@+id/ivRest"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_rest" />
+
+        <TextView
+            android:id="@+id/tvRest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/din_next_lt_pro_medium_cond"
+            android:maxLines="1"
+            android:text="rest"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlue"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <com.athleteminder.utils.RippleBackground
+        android:id="@+id/rippleCircle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:rb_color="@android:color/white"
+        app:rb_radius="18dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="2500"
+        app:rb_scale="4"
+        app:rb_strokeWidth="2dp"
+        app:rb_type="strokeRipple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llCompetition"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivCirclePlus"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_plus_white"/>
+
+    </com.athleteminder.utils.RippleBackground>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

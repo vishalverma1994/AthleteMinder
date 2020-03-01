@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="rippleRadius">10dp</dimen>
+    <dimen name="fragment_appointment_width">240dp</dimen>
+    <dimen name="fragment_appointment_height">720dp</dimen>
+</resources>

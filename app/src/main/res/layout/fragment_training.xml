@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_bg_training"
+    tools:context=".ui.fragments.TrainingFragment">
+
+    <ImageView
+        android:id="@+id/ivTraining"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="140dp"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/ic_training_white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/din_next_lt_pro_medium_cond"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="@string/training"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTraining" />
+
+    <TextView
+        android:id="@+id/tvReflectTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/din_next_lt_pro_medium_cond"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:maxLines="2"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="@string/reflect_on_your_training_by_answering_the_following_questions"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/tvTraining" />
+
+    <Button
+        android:id="@+id/btnHowDidItGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@mipmap/ic_how_did_normal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvReflectTraining" />
+
+    <Button
+        android:id="@+id/btnDeleteEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/din_next_lt_pro_medium_cond"
+        android:text="@string/delete_event"
+        android:textAllCaps="false"
+        android:textColor="@color/colorButtonTextGreen"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHowDidItGo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

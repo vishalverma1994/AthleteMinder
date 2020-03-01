@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AthleteMinder</string>
+    <string name="terms_of_service">By using this service, I accept Athlete Minder\'s terms of service</string>
+    <string name="skip">skip</string>
+    <string name="create_my_profile">create my profile</string>
+    <string name="circle_drag_drop_message">Use the circles to drag and drop the type of day you want to add to your calendar.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reflect_on_your_training_by_answering_the_following_questions">Reflect on your training by answering the following questions</string>
+    <string name="delete_event">Delete Event</string>
+    <string name="training">training</string>
+</resources>
